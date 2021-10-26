@@ -1,5 +1,5 @@
-//Express Portfolio
-//morris Zuniga
+//Midterm-COMP229(sec010)
+//Morris Zuniga
 //Student ID: 822704615
 
 
@@ -70,7 +70,7 @@ router.get('/:id', (req, res, next) => {
     else
     {
       //show edit view
-      res.render('books/details', {title: 'Edit Book', Books : Book, action:''})
+      res.render('books/details', {title: 'Edit Book', books : Book, action:''})
     }
   });
 });
