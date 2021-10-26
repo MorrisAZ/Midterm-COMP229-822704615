@@ -61,7 +61,7 @@ router.post('/details', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   let id = req.params.id;
 
-  Books.findById(req.params.id, (err, BookToEdit) =>{
+  Books.findById(req.params.id, (err, Book) =>{
     if(err)
     {
       console.log(err);
@@ -70,7 +70,7 @@ router.get('/:id', (req, res, next) => {
     else
     {
       //show edit view
-      res.render('books/details', {title: 'Edit Book', book : BookToEdit, action:''})
+      res.render('books/details', {title: 'Edit Book', Books : Book, action:''})
     }
   });
 });
